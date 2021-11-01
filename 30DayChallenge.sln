@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.11
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "30DayChallenge", "30DayChallenge\30DayChallenge.csproj", "{5C883769-F0BD-4BC0-9B9C-A94A019BDDFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C883769-F0BD-4BC0-9B9C-A94A019BDDFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C883769-F0BD-4BC0-9B9C-A94A019BDDFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C883769-F0BD-4BC0-9B9C-A94A019BDDFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C883769-F0BD-4BC0-9B9C-A94A019BDDFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE124538-DADB-4E21-953A-0274C43EAC3F}
+	EndGlobalSection
+EndGlobal
