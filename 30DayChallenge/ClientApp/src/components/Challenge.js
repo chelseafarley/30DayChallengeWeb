@@ -32,6 +32,13 @@ export class Challenge extends Component {
         tech: "Python, Flask, gunicorn, BeautifulSoup4",
         description: "This is a basic script to web scrape for covid 19 locations of interest and return them via a flask API. The parsing was done by BeautifulSoup4 and gunicorn was used for deployment to Heroku.",
         youtube: "https://www.youtube.com/embed/CzPulkCRz1Y"
+      },
+      {
+        title: "Google Maps",
+        gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
+        tech: "React, Swagger, Google Maps API, Web API",
+        description: "React page with Google Map showing Covid-19 locations of interest from Day 4 locations of interest API. If you want this to work locally you will need to run that API while running this website. I also configured swagger as a bit of a bonus ;)",
+        youtube: "https://www.youtube.com/embed/CzPulkCRz1Y"
       }
     ];
 
