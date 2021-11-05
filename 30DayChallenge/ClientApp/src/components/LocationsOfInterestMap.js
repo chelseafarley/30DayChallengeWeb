@@ -58,37 +58,23 @@ export class LocationsOfInterestMap extends Component {
     );
   }
 
-  async getLocationWithCoords(location) {
+  async updateLocationWithCoords(location) {
     const response = await Geocode.fromAddress(location.address);
     const { lat, lng } = response.results[0].geometry.location;
     location.coords = {
       lat: lat,
       lng: lng
     };
-
-    return location;
-    //data.forEach(location => {
-    //  Geocode.fromAddress(location.address).then(
-    //    (response) => {
-    //      const { lat, lng } = response.results[0].geometry.location;
-    //      location.coords = {
-    //        lat: lat,
-    //        lng: lng
-    //      };
-    //    },
-    //    (error) => {
-    //      console.error(error);
-    //    }
-    //  );
-    //});
   }
 
   async populateLocationsData() {
     Geocode.setApiKey("");
     const response = await fetch('covid');
     const data = await response.json();
-    const x = await this.getLocationWithCoords(data[0]);
-    const y = await this.getLocationWithCoords(data[1]);
-    this.setState({ locations: [x, y], loading: false });
+    // This could be improved for sure
+    for (const location of data) {
+      await this.updateLocationWithCoords(location);
+    }
+    this.setState({ locations: data, loading: false });
   }
 }
