@@ -31,18 +31,14 @@ export class LocationsOfInterestMap extends Component {
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
           <MarkerClusterer averageCenter enableRetinaIcons gridSize={60}>
             {clusterer =>
-              this.state.locations.map(location => (
-                <LocationMarker key={this.createKey(location.coords)} location={location} clusterer={clusterer} />
+              this.state.locations.map((location, index) => (
+                <LocationMarker key={index} location={location} clusterer={clusterer} />
               ))
             }
           </MarkerClusterer>
         </GoogleMap>
       </LoadScript>
     );
-  }
-
-  createKey(location) {
-    return location.lat + location.lng
   }
 
   render() {
@@ -58,13 +54,18 @@ export class LocationsOfInterestMap extends Component {
     );
   }
 
-  async updateLocationWithCoords(location) {
+  async updateLocationWithCoords(location, locations) {
     const response = await Geocode.fromAddress(location.address);
     const { lat, lng } = response.results[0].geometry.location;
     location.coords = {
       lat: lat,
       lng: lng
     };
+    locations.push(location);
+
+    if (locations.length % 20 === 20) {
+      this.setState({ locations: locations, loading: false });
+    }
   }
 
   async populateLocationsData() {
@@ -72,9 +73,10 @@ export class LocationsOfInterestMap extends Component {
     const response = await fetch('covid');
     const data = await response.json();
     // This could be improved for sure
+    const locations = [];
     for (const location of data) {
-      await this.updateLocationWithCoords(location);
+      this.updateLocationWithCoords(location, locations);
+      this.setState({ locations: locations, loading: false });
     }
-    this.setState({ locations: data, loading: false });
   }
 }

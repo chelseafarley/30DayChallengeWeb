@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Challenge extends Component {
   static displayName = Challenge.name;
@@ -38,7 +39,8 @@ export class Challenge extends Component {
         gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
         tech: "React, Swagger, Google Maps API, Web API",
         description: "React page with Google Map showing Covid-19 locations of interest from Day 4 locations of interest API. If you want this to work locally you will need to run that API while running this website. I also configured swagger as a bit of a bonus ;)",
-        youtube: "https://www.youtube.com/embed/CzPulkCRz1Y"
+        youtube: "https://www.youtube.com/embed/4JCswHKn_0Q",
+        live: "/challenges/covidlocations"
       }
     ];
 
@@ -54,7 +56,8 @@ export class Challenge extends Component {
         <p>Tech: {challenge.tech}</p>
         <p><a href={challenge.gitRepo}>Github Repo</a></p>
         <p>{challenge.description}</p>
-        <iframe width="560" height="315" src={challenge.youtube} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p><Link to={challenge.live}>See it live</Link></p>
+        <iframe width="560" height="315" src={challenge.youtube} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
     );
   }
