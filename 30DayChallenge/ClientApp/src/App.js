@@ -6,6 +6,7 @@ import { AccessDenied } from './components/AccessDenied';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { Challenge } from './components/Challenge';
+import { LocationsOfInterestMap } from './components/LocationsOfInterestMap';
 import AuthorizeRoute from './components/api-authorization/AuthorizeRoute';
 import ApiAuthorizationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
 import { ApplicationPaths } from './components/api-authorization/ApiAuthorizationConstants';
@@ -22,6 +23,7 @@ export default class App extends Component {
         <Route exact path='/accessdenied' component={AccessDenied} />
         <Route path='/counter' component={Counter} />
         <Route path='/challenges/day/:id' component={Challenge} />
+        <Route path='/challenges/covidlocations' component={LocationsOfInterestMap} />
         <AuthorizeRoute path='/fetch-data' component={FetchData} />
         <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
       </Layout>
