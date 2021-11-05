@@ -26,7 +26,7 @@ export class LocationMarker extends Component {
 
   render() {
     return (
-      <Marker position={this.props.location.coords} onLoad={this.onLoad.bind(this)} onClick={this.onToggleOpen.bind(this)}>
+      <Marker clusterer={this.props.clusterer} position={this.props.location.coords} onLoad={this.onLoad.bind(this)} onClick={this.onToggleOpen.bind(this)}>
         {this.state.isOpen && (
           <InfoWindow
             anchor={this.state.mapMarker}
@@ -36,8 +36,8 @@ export class LocationMarker extends Component {
               <h3>{this.props.location.name}</h3>
               <p>{this.props.location.address}</p>
               <ul>
-                {this.props.location.exposureEvents.map((exposureEvent) => (
-                  <li>{exposureEvent.day} - {exposureEvent.times}</li>
+                {this.props.location.exposureEvents.map((exposureEvent, index) => (
+                  <li key={index}>{exposureEvent.day} - {exposureEvent.times}</li>
                 ))}
               </ul>
             </div>

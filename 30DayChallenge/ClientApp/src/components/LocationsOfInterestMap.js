@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, MarkerClusterer } from '@react-google-maps/api';
 import Geocode from "react-geocode";
 import { LocationMarker } from './LocationMarker';
 
@@ -29,7 +29,13 @@ export class LocationsOfInterestMap extends Component {
     return (
       <LoadScript googleMapsApiKey="">
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
-          {this.getMarkers()}
+          <MarkerClusterer averageCenter enableRetinaIcons gridSize={60}>
+            {clusterer =>
+              this.state.locations.map(location => (
+                <LocationMarker key={this.createKey(location.coords)} location={location} clusterer={clusterer} />
+              ))
+            }
+          </MarkerClusterer>
         </GoogleMap>
       </LoadScript>
     );
@@ -37,12 +43,6 @@ export class LocationsOfInterestMap extends Component {
 
   createKey(location) {
     return location.lat + location.lng
-  }
-
-  getMarkers() {
-    return this.state.locations.map((location) => (
-      <LocationMarker key={this.createKey(location.coords)} location={location} />
-    ))
   }
 
   render() {
