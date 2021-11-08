@@ -41,6 +41,20 @@ export class Challenge extends Component {
         description: "React page with Google Map showing Covid-19 locations of interest from Day 4 locations of interest API. If you want this to work locally you will need to run that API while running this website. I also configured swagger as a bit of a bonus ;)",
         youtube: "https://www.youtube.com/embed/4JCswHKn_0Q",
         live: "/challenges/covidlocations"
+      },
+      {
+        title: "Flutter App",
+        gitRepo: "https://github.com/chelseafarley/OnTrack",
+        tech: "Flutter, Dart, Shared Preferences",
+        description: "A simple flutter app to track healthy and unhealthy habits such as glasses of water or number of cigarettes.",
+        youtube: "https://www.youtube.com/embed/iBNEad8K43s",
+      },
+      {
+        title: "ARKit Swift iOS App",
+        gitRepo: "https://github.com/chelseafarley/Pupuru",
+        tech: "Swift, ARKit",
+        description: "A memory game using ARKit to project memory cards onto a surface in front of you",
+        youtube: "https://www.youtube.com/embed/LwV-XDe59PY"
       }
     ];
 
@@ -56,7 +70,9 @@ export class Challenge extends Component {
         <p>Tech: {challenge.tech}</p>
         <p><a href={challenge.gitRepo}>Github Repo</a></p>
         <p>{challenge.description}</p>
-        <p><Link to={challenge.live}>See it live</Link></p>
+        {challenge.live && (
+          <p><Link to={challenge.live}>See it live</Link></p>
+        )}
         <iframe width="560" height="315" src={challenge.youtube} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
     );

@@ -15,6 +15,8 @@ export class Home extends Component {
           <li><Link to="/challenges/day/3">Amazon Alexa skill to tell a random story</Link></li>
           <li><Link to="/challenges/day/4">Webscraping Covid-19 Locations and Exposing via Flask API</Link></li>
           <li><Link to="/challenges/day/5">Consuming Webscraping API, Configuring Swagger and using Google Maps to map data</Link></li>
+          <li><Link to="/challenges/day/6">Flutter App</Link></li>
+          <li><Link to="/challenges/day/7">ARKit Swift iOS App</Link></li>
         </ol>
       </div>
     );
