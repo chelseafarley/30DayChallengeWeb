@@ -17,6 +17,9 @@ export class Home extends Component {
           <li><Link to="/challenges/day/5">Consuming Webscraping API, Configuring Swagger and using Google Maps to map data</Link></li>
           <li><Link to="/challenges/day/6">Flutter App</Link></li>
           <li><Link to="/challenges/day/7">ARKit Swift iOS App</Link></li>
+          <li><Link to="/challenges/day/8">Azure Functions, Cosmos DB, Key Vault and Github Actions</Link></li>
+          <li><Link to="/challenges/day/9">.NET Bot Framework</Link></li>
+          <li><Link to="/challenges/day/10">iOS Sticker Pack App</Link></li>
         </ol>
       </div>
     );

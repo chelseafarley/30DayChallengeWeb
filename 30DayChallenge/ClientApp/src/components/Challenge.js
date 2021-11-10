@@ -55,6 +55,27 @@ export class Challenge extends Component {
         tech: "Swift, ARKit",
         description: "A memory game using ARKit to project memory cards onto a surface in front of you",
         youtube: "https://www.youtube.com/embed/LwV-XDe59PY"
+      },
+      {
+        title: "Azure Functions, Cosmos DB, Key Vault and Github Actions",
+        gitRepo: "https://github.com/chelseafarley/RestaurantSlotsAzureFunction",
+        tech: "C#, Azure Functions, Cosmos DB, Key Vault and Github Actions",
+        description: "Two simple azure functions to get bookings at a restaurant and reserve a table. Backed by Cosmos DB with the access credentials stored in key vault. Automatically deployed via github actions.",
+        youtube: "https://www.youtube.com/embed/e6jChxgOcn4"
+      },
+      {
+        title: ".NET Bot Framework",
+        gitRepo: "https://github.com/chelseafarley/RestaurantBookingBot",
+        tech: "C#, .NET Bot Framework",
+        description: "A bot that uses yesterday's azure functions to interact with a user and gather information required to book a restaurant table for them.",
+        youtube: "https://www.youtube.com/embed/alMcbqMsacs"
+      },
+      {
+        title: "iOS Sticker Pack App",
+        gitRepo: "https://github.com/chelseafarley/ChristmasCheersStickerPack",
+        tech: "Sticker Pack App",
+        description: "An iMessage extension to allow you to add stickers from the Christmas Cheers Sticker Pack to your messages.",
+        youtube: "https://www.youtube.com/embed/zGuGcmZKigk"
       }
     ];
 
