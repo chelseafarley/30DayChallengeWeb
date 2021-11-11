@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using _30DayChallenge.Services;
+using Stripe;
 
 namespace _30DayChallenge
 {
