@@ -24,6 +24,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.20" />
     <PackageReference Include="SendGrid" Version="9.24.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Stripe.net" Version="39.76.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,7 +33,6 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
-    <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
     <None Remove="Microsoft.AspNetCore.Authentication.Facebook" />
     <None Remove="Microsoft.AspNetCore.Authentication.Google" />
@@ -44,6 +44,17 @@
     <None Remove="Swashbuckle.AspNetCore.Swagger" />
     <None Remove="Swashbuckle" />
     <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="Stripe.net" />
+    <None Remove="ClientApp\build\index.html" />
+    <None Remove="ClientApp\build\service-worker.js" />
+    <None Remove="ClientApp\build\static\css\2.22a7d4ef.chunk.css" />
+    <None Remove="ClientApp\build\static\css\2.22a7d4ef.chunk.css.map" />
+    <None Remove="ClientApp\build\static\css\main.553fc9a1.chunk.css" />
+    <None Remove="ClientApp\build\static\css\main.553fc9a1.chunk.css.map" />
+    <None Remove="ClientApp\build\static\js\2.4be052b7.chunk.js" />
+    <None Remove="ClientApp\build\static\js\runtime~main.a8a9905a.js.map" />
+    <None Remove="ClientApp\build\static\js\runtime~main.a8a9905a.js" />
+    <None Remove="ClientApp\build\static\js\2.4be052b7.chunk.js.map" />
   </ItemGroup>
 
   <ItemGroup>

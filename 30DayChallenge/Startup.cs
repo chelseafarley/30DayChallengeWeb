@@ -73,6 +73,8 @@ namespace _30DayChallenge
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            StripeConfiguration.ApiKey = "sk_test_51JuSyjCt6G2oaq5SRaGJWk53Ij1kF30nTk5h3p7mgWOYEq6p98LOfK13igi4nwQDvgtRn43ByeqaGCJhXpqexZxp00HYiPrYX1";
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
