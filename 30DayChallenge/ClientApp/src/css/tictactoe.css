@@ -1,0 +1,17 @@
+﻿.grid {
+    margin-bottom: 32px;
+    margin-top: 8px;
+}
+
+.message {
+    font-size: 18px;
+}
+
+.square {
+    width: 100px;
+    border: 1px solid;
+    height: 100px;
+    font-size: 50px;
+    text-align: center;
+    padding: 12px 0px;
+}
