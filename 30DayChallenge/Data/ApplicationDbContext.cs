@@ -3,10 +3,6 @@ using IdentityServer4.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace _30DayChallenge.Data
 {
@@ -17,5 +13,10 @@ namespace _30DayChallenge.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<MailingList> MailingLists { get; set; }
+        public DbSet<MailingListContactLink> MailingListContacts { get; set; }
+        public DbSet<Template> Templates { get; set; }
     }
 }

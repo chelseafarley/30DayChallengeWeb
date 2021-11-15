@@ -56,12 +56,14 @@
     <None Remove="ClientApp\build\static\js\runtime~main.a8a9905a.js" />
     <None Remove="ClientApp\build\static\js\2.4be052b7.chunk.js.map" />
     <None Remove="ClientApp\src\css\" />
+    <None Remove="ClientApp\src\components\mailer\" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="DataModel\" />
     <Folder Include="ClientApp\src\css\" />
+    <Folder Include="ClientApp\src\components\mailer\" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
