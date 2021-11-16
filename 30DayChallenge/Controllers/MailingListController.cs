@@ -28,14 +28,15 @@ namespace _30DayChallenge.Controllers
         public IList<MailingList> Get()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            IList<MailingList> mailingLists = _dbContext.MailingLists.Include(x => x.MailingLists).Where(y => y.UserId == userId).ToList();
+            IList<MailingList> mailingLists = _dbContext.MailingLists.Include(x => x.MailingLists).ThenInclude(y => y.Contact).Where(y => y.UserId == userId).ToList();
 
             //In real code I would create data models to send to front end. In hacky code I will just null out the cyclic reference
-            foreach(MailingList mailingList in mailingLists)
+            foreach (MailingList mailingList in mailingLists)
             {
-                foreach(MailingListContactLink mailingListContactLink in mailingList.MailingLists)
+                foreach (MailingListContactLink mailingListContactLink in mailingList.MailingLists)
                 {
                     mailingListContactLink.MailingList = null;
+                    mailingListContactLink.Contact.MailingLists = null;
                 }
             }
 
