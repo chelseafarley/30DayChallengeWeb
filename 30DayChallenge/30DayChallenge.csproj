@@ -25,6 +25,7 @@
     <PackageReference Include="SendGrid" Version="9.24.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="Stripe.net" Version="39.76.0" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.2.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -57,6 +58,7 @@
     <None Remove="ClientApp\build\static\js\2.4be052b7.chunk.js.map" />
     <None Remove="ClientApp\src\css\" />
     <None Remove="ClientApp\src\components\mailer\" />
+    <None Remove="RabbitMQ.Client" />
   </ItemGroup>
 
   <ItemGroup>
