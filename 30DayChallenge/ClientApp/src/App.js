@@ -11,6 +11,7 @@ import { AccessDenied } from './components/AccessDenied';
 import { FetchData } from './components/FetchData';
 import { MailerHome } from './components/mailer/MailerHome';
 import { MailerSend } from './components/mailer/MailerSend';
+import { ToDo } from './components/ToDo';
 import { Counter } from './components/Counter';
 import { Challenge } from './components/Challenge';
 import { LocationsOfInterestMap } from './components/LocationsOfInterestMap';
@@ -33,6 +34,7 @@ export default class App extends Component {
         <Route exact path='/success' component={Success} />
         <Route exact path='/cancel' component={Cancel} />
         <Route exact path='/accessdenied' component={AccessDenied} />
+        <Route path='/todo' component={ToDo} />
         <Route path='/counter' component={Counter} />
         <Route path='/challenges/day/:id' component={Challenge} />
         <Route path='/challenges/covidlocations' component={LocationsOfInterestMap} />
