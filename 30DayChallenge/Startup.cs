@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
 using _30DayChallenge.Data;
@@ -14,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using _30DayChallenge.Services;
 using Stripe;
+using _30DayChallenge.Hubs;
 
 namespace _30DayChallenge
 {
@@ -69,6 +67,19 @@ namespace _30DayChallenge
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddSignalR();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("ClientPermission", policy =>
+                {
+                    policy.AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .WithOrigins("http://localhost:3000")
+                        .AllowCredentials();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -94,6 +105,7 @@ namespace _30DayChallenge
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+            app.UseCors("ClientPermission");
 
             app.UseRouting();
 
@@ -106,6 +118,7 @@ namespace _30DayChallenge
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapHub<GamesHub>("/hubs/games");
             });
 
             app.UseSpa(spa =>

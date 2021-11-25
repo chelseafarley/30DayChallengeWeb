@@ -59,6 +59,8 @@
     <None Remove="ClientApp\src\css\" />
     <None Remove="ClientApp\src\components\mailer\" />
     <None Remove="RabbitMQ.Client" />
+    <None Remove="Hubs\" />
+    <None Remove="Hubs\Clients\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,6 +68,8 @@
     <Folder Include="DataModel\" />
     <Folder Include="ClientApp\src\css\" />
     <Folder Include="ClientApp\src\components\mailer\" />
+    <Folder Include="Hubs\" />
+    <Folder Include="Hubs\Clients\" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
