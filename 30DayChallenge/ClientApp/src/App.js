@@ -2,6 +2,7 @@
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
+import { GameResults } from './components/GameResults';
 import { Recharts } from './components/Recharts';
 import { SupportUs } from './components/SupportUs';
 import { TicTacToe } from './components/TicTacToe';
@@ -28,6 +29,7 @@ export default class App extends Component {
     return (
       <Layout>
         <Route exact path='/' component={Home} />
+        <Route exact path='/gameresults' component={GameResults} />
         <Route exact path='/recharts' component={Recharts} />
         <Route exact path='/tictactoe' component={TicTacToe} />
         <Route exact path='/supportus' component={SupportUs} />

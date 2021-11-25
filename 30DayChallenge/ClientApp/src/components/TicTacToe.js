@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import { HubConnectionBuilder } from '@microsoft/signalr';
 import '../css/tictactoe.css';
 
 export class TicTacToe extends Component {
@@ -16,8 +17,36 @@ export class TicTacToe extends Component {
       message: "",
       playerWon: false,
       matrixSize: 3,
-      matrixSizeInput: 3
+      matrixSizeInput: 3,
+      recentGameResults: []
     };
+  }
+
+  componentDidMount() {
+    const newConnection = new HubConnectionBuilder()
+      .withUrl('https://localhost:5001/hubs/games')
+      .withAutomaticReconnect()
+      .build();
+
+    this.setState({
+      connection: newConnection
+    });
+
+    newConnection.start();
+  }
+
+  sendResult(winner) {
+    if (this.state.connection.state === "Connected") {
+      try {
+        this.state.connection.send("SendGameResult", `${winner} won TicTacToe`);
+      }
+      catch (e) {
+        console.log(e);
+      }
+    }
+    else {
+      console.log("No connection to server yet.");
+    }
   }
 
   squareClicked(row, col) {
@@ -35,6 +64,9 @@ export class TicTacToe extends Component {
       updatedValues[row][col] = this.state.currentPlayer;
 
       let playerWon = this.checkForWin(row, col, updatedValues);
+      if (playerWon) {
+        this.sendResult(this.state.currentPlayer);
+      }
 
       this.setState({
         gridValues: updatedValues,
