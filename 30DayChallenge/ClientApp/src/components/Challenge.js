@@ -76,7 +76,147 @@ export class Challenge extends Component {
         tech: "Sticker Pack App",
         description: "An iMessage extension to allow you to add stickers from the Christmas Cheers Sticker Pack to your messages.",
         youtube: "https://www.youtube.com/embed/zGuGcmZKigk"
-      }
+      },
+      {
+        title: "Stripe Payments",
+        gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
+        tech: "Stripe API, React, C#, web api",
+        description: "Get checkout session for Stripe API and make payment.",
+        youtube: "https://www.youtube.com/embed/bRBcpcBaSLc",
+        live: "/supportus"
+      },
+      {
+        title: "React TicTacToe",
+        gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
+        tech: "React",
+        description: "A react based TicTacToe game.",
+        youtube: "https://www.youtube.com/embed/jh45U-C7go8",
+        live: "/tictactoe"
+      },
+      {
+        title: "iMessage Extension - TicTacToe game",
+        gitRepo: "https://github.com/chelseafarley/TicTacToe",
+        tech: "Swift, iMessage Extension",
+        description: "A swift based TicTacToe game played with a friend through iMessage.",
+        youtube: "https://www.youtube.com/embed/hkVue3b3Rj8",
+      },
+      {
+        title: "Recharts",
+        gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
+        tech: "recharts, React",
+        description: "Using the recharts package to create beautiful charts.",
+        youtube: "https://www.youtube.com/embed/VKD8qAazTdI",
+        live: "/recharts"
+      },
+      {
+        title: "Entity Framework Code First Migrations",
+        gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
+        tech: "Entity Framework",
+        description: "Add mailing models to my database using EF code first migrations.",
+        youtube: "https://www.youtube.com/embed/plWleV73p5k",
+        live: "/mailer/home"
+      },
+      {
+        title: "Gmail API in React to Send Message",
+        gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
+        tech: "Gmail API, React",
+        description: "Add mailing models to my database using EF code first migrations.",
+        youtube: "https://www.youtube.com/embed/EbbWmk8AfRI",
+        live: "/mailer/send"
+      },
+      {
+        title: "Rabbit MQ in Docker and Publishing Messages",
+        gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
+        tech: "RabbitMQ, .netcore, C#",
+        description: "Running rabbitmq in docker and publishing a message to a queue.",
+        youtube: "https://www.youtube.com/embed/EWkjWbUfDBQ"
+      },
+      {
+        title: "Google Admob Ads for Flutter App",
+        gitRepo: "https://github.com/chelseafarley/OnTrack",
+        tech: "Admob, Dart, Flutter",
+        description: "Monetise your apps with admob ads on your Flutter App",
+        youtube: "https://www.youtube.com/embed/DbdnrSnRSJI"
+      },
+      {
+        title: "Google Tasks API in React",
+        gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
+        tech: "Google Tasks API, React",
+        description: "Create a simple todo list tool using Google Tasks.",
+        youtube: "https://www.youtube.com/embed/sgQyP4R8ufo",
+        live: "/todo"
+      },
+      {
+        title: "TicTacToe Watchkit App",
+        gitRepo: "https://github.com/chelseafarley/TicTacToe",
+        tech: "Watchkit, Swift",
+        description: "Play TicTacToe on your Apple Watch.",
+        youtube: "https://www.youtube.com/embed/3jA-Yieck2Y"
+      },
+      {
+        title: "Gradient React Components NPM Package",
+        gitRepo: "https://github.com/chelseafarley/react-gradient-ui",
+        tech: "npm, React, Babel",
+        description: "A set of gradient components for React.",
+        youtube: "https://www.youtube.com/embed/3SGg5CavOcM"
+      },
+      {
+        title: "Slack App with Slash Command",
+        gitRepo: "https://github.com/chelseafarley/QuoteSlackCommand",
+        tech: "Azure Functions, Slack App, C#",
+        description: "A slash command slack app to retrieve an inspirational quote.",
+        youtube: "https://www.youtube.com/embed/JjmKmqFE_bw"
+      },
+      {
+        title: "NPM Global Package to Create Git Repos",
+        gitRepo: "https://github.com/chelseafarley/git-start",
+        tech: "npm, nodejs, bash",
+        description: "A globally installed command to create git repos with relevant gitignore",
+        youtube: "https://www.youtube.com/embed/9OhArl-qFCM"
+      },
+      {
+        title: "Scrollmarks Chrome Extension",
+        gitRepo: "https://github.com/chelseafarley/git-start",
+        tech: "chrome apis, chrome extension, js, html",
+        description: "A chrome extension to bookmark your current scroll location on a website.",
+        youtube: "https://www.youtube.com/embed/LXzLS2zWo14"
+      },
+      {
+        title: "SignalR for Realtime React Website Updates",
+        gitRepo: "https://github.com/chelseafarley/30DayChallengeWeb",
+        tech: "signal r, React, C#",
+        description: "When playing tictactoe on this react website, if you have the game results page open simultaneously you will see real time result updates.",
+        youtube: "https://www.youtube.com/embed/uJ5OCEcgeNA",
+        live: "/gameresults"
+      },
+      {
+        title: "Express APIs for Node JS",
+        gitRepo: "https://github.com/chelseafarley/google-cloud-functions",
+        tech: "Express, nodejs, yaml, google cloud build, google cloud functions",
+        description: "Implementing various api endpoints using Express and deploying on push to main branch through google cloud builds.",
+        youtube: "https://www.youtube.com/embed/c4DFPHgaTr4"
+      },
+      {
+        title: "React Native Tab Bar App",
+        gitRepo: "https://github.com/chelseafarley/xchangr",
+        tech: "Expo, React Native, React Context, Async Storage, Tab Bar",
+        description: "A tab bar controller app with overall app state shared with the tabs via Context providers. The data is stored in async storage",
+        youtube: "https://www.youtube.com/embed/Z4YiKF0Me8Y"
+      },
+      {
+        title: "Firebase Auth",
+        gitRepo: "https://github.com/chelseafarley/google-cloud-functions",
+        tech: "Firebase Auth, React, Express APIs, nodejs",
+        description: "A react frontend to login using Firebase Auth and Express APIs to validate the token.",
+        youtube: "https://www.youtube.com/embed/XhjCx__0L88"
+      },
+      {
+        title: "Google Admob Ads for Swift (iOS) App",
+        gitRepo: "https://github.com/chelseafarley/SwiftAdmobExample",
+        tech: "Google Admob, Swift, iOS, Banner Ads, Interstitial Ads",
+        description: "A test app showing how to setup Google Admob Banner and Interstitial Ads in Swift based iOS apps.",
+        youtube: "https://www.youtube.com/embed/YZFkpFpSWDQ"
+      },
     ];
 
     return challengeInfo[id - 1];
