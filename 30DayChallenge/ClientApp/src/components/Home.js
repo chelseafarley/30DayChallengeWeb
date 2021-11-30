@@ -39,6 +39,7 @@ export class Home extends Component {
           <li><Link to="/challenges/day/27">React Native Tab Bar App</Link></li>
           <li><Link to="/challenges/day/28">Firebase Auth for Express APIs and React Frontend</Link></li>
           <li><Link to="/challenges/day/29">Google Admob Ads for Swift (iOS) App</Link></li>
+          <li><Link to="/challenges/day/30">Blazor WebAssembly App</Link></li>
         </ol>
       </div>
     );

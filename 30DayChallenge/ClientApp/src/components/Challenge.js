@@ -217,6 +217,13 @@ export class Challenge extends Component {
         description: "A test app showing how to setup Google Admob Banner and Interstitial Ads in Swift based iOS apps.",
         youtube: "https://www.youtube.com/embed/YZFkpFpSWDQ"
       },
+      {
+        title: "Blazor WebAssembly App",
+        gitRepo: "https://github.com/chelseafarley/Blazor",
+        tech: "Blazor, Web API",
+        description: "A simple Blazor WebAssembly App demonstrating sharing code between server and client.",
+        youtube: "https://www.youtube.com/embed/7Tp82lGqg-U"
+      },
     ];
 
     return challengeInfo[id - 1];
